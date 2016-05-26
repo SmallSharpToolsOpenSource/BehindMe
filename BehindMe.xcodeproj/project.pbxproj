@@ -17,6 +17,7 @@
 		2614F52F1CF7A1F5004A5F71 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2614F52E1CF7A1F5004A5F71 /* TableViewController.m */; };
 		2614F5321CF7A20B004A5F71 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2614F5311CF7A20B004A5F71 /* CollectionViewController.m */; };
 		2614F5341CF7A2D7004A5F71 /* CaptainAmerica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2614F5331CF7A2D7004A5F71 /* CaptainAmerica.jpg */; };
+		2614F5361CF7BFE4004A5F71 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2614F5351CF7BFE4004A5F71 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		2614F5301CF7A20B004A5F71 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		2614F5311CF7A20B004A5F71 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		2614F5331CF7A2D7004A5F71 /* CaptainAmerica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CaptainAmerica.jpg; sourceTree = SOURCE_ROOT; };
+		2614F5351CF7BFE4004A5F71 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		2614F4EE1CF7A1C4004A5F71 = {
 			isa = PBXGroup;
 			children = (
+				2614F5351CF7BFE4004A5F71 /* README.md */,
 				2614F4F91CF7A1C4004A5F71 /* BehindMe */,
 				2614F5131CF7A1C5004A5F71 /* BehindMeTests */,
 				2614F51E1CF7A1C5004A5F71 /* BehindMeUITests */,
@@ -281,6 +284,7 @@
 			files = (
 				2614F5321CF7A20B004A5F71 /* CollectionViewController.m in Sources */,
 				2614F4FF1CF7A1C4004A5F71 /* AppDelegate.m in Sources */,
+				2614F5361CF7BFE4004A5F71 /* README.md in Sources */,
 				2614F52F1CF7A1F5004A5F71 /* TableViewController.m in Sources */,
 				2614F4FC1CF7A1C4004A5F71 /* main.m in Sources */,
 			);
@@ -510,6 +514,7 @@
 				2614F5261CF7A1C5004A5F71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2614F5271CF7A1C5004A5F71 /* Build configuration list for PBXNativeTarget "BehindMeTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +523,7 @@
 				2614F5291CF7A1C5004A5F71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2614F52A1CF7A1C5004A5F71 /* Build configuration list for PBXNativeTarget "BehindMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +532,7 @@
 				2614F52C1CF7A1C5004A5F71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
