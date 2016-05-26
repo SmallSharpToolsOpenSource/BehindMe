@@ -8,7 +8,7 @@ project shows how that can be done.
 
 For this example, there was a need to place a screenshot of
 the content of the view before changing to a search state so
-a blurred and darkened image could appear behind that search
+a blurred and darkened image could appear behind the search
 results.
 
 When working with top and bottom bars with table and collection
