@@ -21,14 +21,26 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BasicCell" id="68n-tI-2xQ">
-                                <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
+                                <rect key="frame" x="0.0" y="64" width="68" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="68" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdI-wp-3W1">
+                                            <rect key="frame" x="29" y="23" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bdI-wp-3W1" firstAttribute="centerX" secondItem="68n-tI-2xQ" secondAttribute="centerX" id="mez-u4-ePh"/>
+                                    <constraint firstItem="bdI-wp-3W1" firstAttribute="centerY" secondItem="68n-tI-2xQ" secondAttribute="centerY" id="vhj-hx-fj2"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -36,11 +48,17 @@
                             <outlet property="delegate" destination="bjh-qE-GHP" id="0hZ-Qx-XfM"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Collection View" id="fO0-5n-IZB"/>
+                    <navigationItem key="navigationItem" title="Collection View" id="q9b-Fw-hgz">
+                        <barButtonItem key="rightBarButtonItem" title="Toggle" id="9pw-DA-h75">
+                            <connections>
+                                <action selector="toggleButtonTapped:" destination="bjh-qE-GHP" id="JBe-5h-41p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bl1-78-Cvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="819"/>
+            <point key="canvasLocation" x="1587" y="819"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5r5-vd-mme">
@@ -52,8 +70,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kI8-Bs-nEh" kind="relationship" relationship="viewControllers" id="9YH-gn-fac"/>
-                        <segue destination="bjh-qE-GHP" kind="relationship" relationship="viewControllers" id="pWZ-iJ-nbX"/>
+                        <segue destination="ZMs-MG-W7T" kind="relationship" relationship="viewControllers" id="9YH-gn-fac"/>
+                        <segue destination="Moy-Ar-Nkx" kind="relationship" relationship="viewControllers" id="pWZ-iJ-nbX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TaB-VQ-ENc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,7 +88,7 @@
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="eRf-3L-jgv" style="IBUITableViewCellStyleDefault" id="k2Q-wi-oQZ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k2Q-wi-oQZ" id="OpY-eB-qOv">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -85,6 +103,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,11 +111,55 @@
                             <outlet property="delegate" destination="kI8-Bs-nEh" id="Fcc-xu-wIE"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Table View" id="lZf-TL-FVD"/>
+                    <navigationItem key="navigationItem" title="Table View" id="Rua-hC-dSo">
+                        <barButtonItem key="rightBarButtonItem" title="Toggle" id="mq4-Kf-wlY">
+                            <connections>
+                                <action selector="toggleButtonTapped:" destination="kI8-Bs-nEh" id="5ls-qo-Mmj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQ1-c7-Cpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1587" y="146"/>
+        </scene>
+        <!--Table View-->
+        <scene sceneID="NOp-tz-etv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZMs-MG-W7T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Table View" id="lZf-TL-FVD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KC8-pM-bDM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kI8-Bs-nEh" kind="relationship" relationship="rootViewController" id="fvC-pt-003"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rba-XJ-4TA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="775" y="146"/>
+        </scene>
+        <!--Collection View-->
+        <scene sceneID="J3W-pr-11y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Moy-Ar-Nkx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection View" id="fO0-5n-IZB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IFD-g7-P5X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bjh-qE-GHP" kind="relationship" relationship="rootViewController" id="anJ-kU-IdI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34d-HP-guQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="819"/>
         </scene>
     </scenes>
 </document>
